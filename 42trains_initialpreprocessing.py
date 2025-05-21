@@ -22,9 +22,9 @@ args = parser.parse_args()
 inputFile = args.inputFileLocation
 outputFileLocation = args.outputFileLocation
 
-df = pd.read_excel(f"{inputFile}",sheet_name="TIME TABLE 07WD026_10032025",header = None)
-#df.drop([3,48,49], inplace=True)
-#df = df.reset_index(drop=True)
+df = pd.read_excel(f"{inputFile}",sheet_name="TIME TABLE 07SA017_12052025",header = None)
+df.drop([3,48,49], inplace=True)
+df = df.reset_index(drop=True)
 rakes = []
 for i in range(1,df.shape[1]):
   rakes.append(df.iloc[0,i])
@@ -161,7 +161,7 @@ for i in range(1,df.shape[1]):
               # uniqueID.append(df.iloc[92,i]+"U")
             break
         if flag2: break
-        else: print("error2",df.iloc[0,i])
+        else: print("error2",df.iloc[0,i],df.iloc[6,i])
     for j in list1:
       if j >= req:
         if not pd.isna(df.iloc[j,i]) and type(df.iloc[j,i]) != str and type(df.iloc[j,i]) != int:
