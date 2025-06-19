@@ -18,15 +18,17 @@ The system is built in modular Python scripts that handle different aspects of c
 ## 📁 Folder Structure
 
 crew/
-├── crew35.py # Alternate version of crew generation logic
-├── svvrCrew.py # Core crew scheduling logic with plotting support
-├── svvrRoster.py # Generates final rosters for crew
-├── stepback_preprocess.py # Merges services based on step-back logic
-├── solToRoster.py # Converts optimization solution to readable duty roster
-├── MathematicalModel.py # Pyomo-based optimization model to minimize crew count
-├── 42trains_initialpreprocessing.py # Preprocessing timetable Excel to CSV
-├── main.sh # Execution script (shell)
-├── LICENSE
+├── main.sh                     # Master script
+├── 42trains_initialpreprocessing.py  # Timetable processor
+├── stepback_preprocess.py      # Step-back service handler
+├── crew35.py                   # Main loop generator
+├── svvrCrew.py                 # SVVR loop generator
+├── MathematicalModel.py        # Optimizer
+├── solToRoster.py              # Main output generator
+├── svvrRoster.py               # SVVR output generator
+├── jurisdiction.csv            # Control boundaries
+├── InputParameters.csv         # Operational parameters
+└── README.md                   # This file
 
 ---
 
