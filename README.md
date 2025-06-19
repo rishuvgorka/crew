@@ -32,11 +32,18 @@ crew/
 
 ## 🧮 Dependencies
 
-Install the following dependencies before running:
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `seaborn`
+- `plotly`
+- `pyomo`
+
+Install the above dependencies before running:
 
 ```bash
 pip install pandas numpy matplotlib plotly seaborn pyomo
-
+```
 You also need a solver supported by Pyomo like:
 MIP (e.g., mbnb)
 
