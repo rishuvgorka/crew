@@ -16,7 +16,7 @@ The system is built in modular Python scripts that handle different aspects of c
 
 
 ## 📁 Folder Structure
-
+```text
 crew/
 ├── main.sh                     # Master script
 ├── 42trains_initialpreprocessing.py  # Timetable processor
@@ -30,7 +30,7 @@ crew/
 ├── InputParameters.csv         # Operational parameters
 └── README.md                   # This file
 
-
+```
 
 ## 🧮 Dependencies
 
