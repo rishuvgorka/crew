@@ -80,6 +80,21 @@ nohup bash main.sh <input_excel> >log.txt 2>&1 &
 ```
 Here `log.txt` stores the log or the output printed in the terminal of the above command.
 
+## System Architecture
+```mermaid
+graph TD
+    A[Input Timetable] --> B[42trains_initialpreprocessing.py]
+    B --> C[InitialServices.csv]
+    C --> D[stepback_preprocess.py]
+    D --> E[Main Loop/SVVR Loop CSVs]
+    E --> F[crew35.py/svvrCrew.py]
+    F --> G[Set of Duties]
+    G --> H[MathematicalModel.py]
+    H --> I[Optimized Solution]
+    I --> J[solToRoster.py/svvrRoster.py]
+    J --> K[Final Outputs]
+```
+
 ## 📊 Features
 Automatic merging of compatible services (step-back and non-step-back)
 
