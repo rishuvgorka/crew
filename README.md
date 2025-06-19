@@ -47,22 +47,38 @@ pip install pandas numpy matplotlib plotly seaborn pyomo
 You also need a solver supported by Pyomo like:
 MIP (e.g., mbnb)
 
-🚀 How to Run
+## 🚀 How to Run
 Each script has command-line arguments for flexible execution. Here's the general flow:
 
 1. Preprocessing
+```bash
  - python 42trains_initialpreprocessing.py <input_excel> <output_folder>
  - python stepback_preprocess.py <output_folder>
+```
 2. Generate Duties
+```bash
  - python svvrCrew.py <preprocessed_file>
+```
 3. Optimize Duty Allocation
+```bash
  - python MathematicalModel.py <input_file> <temp_folder>
+```
 4. Generate Final Roster
+```bash
  - python solToRoster.py <input_file> <temp_folder> <output_folder>
+```
 
 You may also use the main.sh shell script to run the full pipeline.
+```bash
+bash main.sh <input_excel>
+```
+If you wanna push the task in the background then use:
+```bash
+nohup bash main.sh <input_excel> >log.txt 2>&1 &
+```
+Here `log.txt` stores the log or the output printed in the terminal of the above command.
 
-📊 Features
+## 📊 Features
 Automatic merging of compatible services (step-back and non-step-back)
 
 Constraints-based duty generation
@@ -71,10 +87,10 @@ Uses optimization to minimize crew
 
 Generates exportable CSV rosters and trip chart.
 
-📃 License
+## 📃 License
 This project is licensed under the terms of the LICENSE file.
 
-✍️ Author
+## ✍️ Author
 Rishuv Gorka
 IIT Bombay | Crew Scheduling Automation | Delhi Metro Optimization
 
