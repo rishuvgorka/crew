@@ -8,6 +8,7 @@ This system automates the complex process of crew scheduling for railway operati
 - Generating valid duty combinations that comply with operational rules
 - Optimizing crew assignments using mathematical programming
 - Producing comprehensive rosters and trip charts
+
 While satisfying several operational constraints such as:
 - Jurisdiction restrictions
 - Step-back train logic
