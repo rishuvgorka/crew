@@ -13,7 +13,7 @@ The goal is to allocate train services to crew members while satisfying several 
 
 The system is built in modular Python scripts that handle different aspects of crew scheduling — from preprocessing raw data to generating optimal duty charts using mathematical programming.
 
----
+
 
 ## 📁 Folder Structure
 
@@ -30,7 +30,7 @@ crew/
 ├── InputParameters.csv         # Operational parameters
 └── README.md                   # This file
 
----
+
 
 ## 🧮 Dependencies
 
