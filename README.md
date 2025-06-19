@@ -1,7 +1,6 @@
-# DMRC's Crew Scheduling
-# Crew Scheduling Automation
+# Crew Scheduling Automation for DMRC
 
-This repository contains a system to automate the generation of crew duty rosters for train operations. It uses mathematical modeling, preprocessing of operational data, and optimization algorithms to significantly reduce the time and effort required in manual crew scheduling.
+This repository contains a system to automate the generation of crew duty rosters for train operations for Line 7 (Pink Line) of Delhi Metro Rail Corporation. It uses mathematical modeling, preprocessing of operational data, and optimization algorithms to significantly reduce the time and effort required in manual crew scheduling.
 
 ## 📌 Project Overview
 
@@ -29,10 +28,6 @@ crew/
 ├── main.sh # Execution script (shell)
 ├── LICENSE
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 🧮 Dependencies
@@ -41,41 +36,23 @@ Install the following dependencies before running:
 
 ```bash
 pip install pandas numpy matplotlib plotly seaborn pyomo
+
 You also need a solver supported by Pyomo like:
-
-Gurobi (recommended)
-
 MIP (e.g., mbnb)
 
 🚀 How to Run
 Each script has command-line arguments for flexible execution. Here's the general flow:
 
 1. Preprocessing
-bash
-Copy
-Edit
-python 42trains_initialpreprocessing.py <input_excel> <output_folder>
-python stepback_preprocess.py <output_folder>
+ - python 42trains_initialpreprocessing.py <input_excel> <output_folder>
+ - python stepback_preprocess.py <output_folder>
 2. Generate Duties
-bash
-Copy
-Edit
-python svvrCrew.py <preprocessed_file>
+ - python svvrCrew.py <preprocessed_file>
 3. Optimize Duty Allocation
-bash
-Copy
-Edit
-python MathematicalModel.py <input_file> <temp_folder>
+ - python MathematicalModel.py <input_file> <temp_folder>
 4. Generate Final Roster
-bash
-Copy
-Edit
-python solToRoster.py <input_file> <temp_folder> <output_folder>
-5. Visualize/Export
-bash
-Copy
-Edit
-python svvrRoster.py <input_file> <temp_folder> <output_folder>
+ - python solToRoster.py <input_file> <temp_folder> <output_folder>
+
 You may also use the main.sh shell script to run the full pipeline.
 
 📊 Features
@@ -85,9 +62,7 @@ Constraints-based duty generation
 
 Uses optimization to minimize crew
 
-Generates exportable CSV rosters
-
-Supports plotting of crew charts and rake flows
+Generates exportable CSV rosters and trip chart.
 
 📃 License
 This project is licensed under the terms of the LICENSE file.
@@ -95,5 +70,4 @@ This project is licensed under the terms of the LICENSE file.
 ✍️ Author
 Rishuv Gorka
 IIT Bombay | Crew Scheduling Automation | Delhi Metro Optimization
-
 
