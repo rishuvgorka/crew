@@ -3,8 +3,12 @@
 This repository contains a system to automate the generation of crew duty rosters for train operations for Line 7 (Pink Line) of Delhi Metro Rail Corporation. It uses mathematical modeling, preprocessing of operational data, and optimization algorithms to significantly reduce the time and effort required in manual crew scheduling.
 
 ## 📌 Project Overview
-
-The goal is to allocate train services to crew members while satisfying several operational constraints such as:
+This system automates the complex process of crew scheduling for railway operations by:
+- Processing timetable data into service segments
+- Generating valid duty combinations that comply with operational rules
+- Optimizing crew assignments using mathematical programming
+- Producing comprehensive rosters and trip charts
+While satisfying several operational constraints such as:
 - Jurisdiction restrictions
 - Step-back train logic
 - Sign-on/off times and crew change rules
